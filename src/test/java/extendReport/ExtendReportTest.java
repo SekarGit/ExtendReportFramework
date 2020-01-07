@@ -26,7 +26,7 @@ public class ExtendReportTest {
 
     @BeforeMethod
     public void setup(){
-       System.setProperty("webdriver.chrome.driver","C:\\Users\\sekar_p\\Desktop\\chromedriver_win32\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver","C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\chromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
@@ -49,7 +49,7 @@ public class ExtendReportTest {
         extentTest = extentReports.createTest("openAmazonHomePage");
         driver.get("https://www.amazon.com");
         String titleName = driver.getTitle();
-        Assert.assertEquals(titleName,"wwww.amazon.com1");
+        Assert.assertEquals(titleName,"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
     }
 
     @Test
