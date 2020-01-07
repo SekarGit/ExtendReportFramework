@@ -1,0 +1,9 @@
+<suite name="ExtendReport" verbose="1">
+
+    <test name="ExtendReportTest" preserve-order="true">
+        <classes>
+            <class name="extendReport.ExtendReportTest">
+            </class>
+        </classes>
+    </test>
+</suite>
