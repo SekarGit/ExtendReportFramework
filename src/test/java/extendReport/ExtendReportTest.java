@@ -33,7 +33,7 @@ public class ExtendReportTest {
 
     @BeforeTest
     public void setupExtendReprot(){
-        extentHtmlReporter = new ExtentHtmlReporter("C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\testReports\\extendReport"+System.currentTimeMillis()+".html");
+        extentHtmlReporter = new ExtentHtmlReporter("C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\testReports\\extendReport"+System.currentTimeMillis()+".html");
         extentHtmlReporter.config().setDocumentTitle("Selenium UI Automation Reports");
         extentHtmlReporter.config().setReportName("Home Page Title Validations");
         extentHtmlReporter.config().setTheme(Theme.DARK);
@@ -49,7 +49,7 @@ public class ExtendReportTest {
         extentTest = extentReports.createTest("openAmazonHomePage");
         driver.get("https://www.amazon.com");
         String titleName = driver.getTitle();
-        Assert.assertEquals(titleName,"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
+        Assert.assertEquals(titleName,"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more1");
     }
 
     @Test
@@ -90,7 +90,7 @@ public class ExtendReportTest {
     private String takeScreenShot(String methodName) throws IOException {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File screenShotSource = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String path = "C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\testEvidance\\FailedScreenshot"+System.currentTimeMillis()+".jpg";
+        String path = "C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\testEvidance\\FailedScreenshot"+System.currentTimeMillis()+".jpg";
         FileUtil.copyFile(screenShotSource,new File(path));
         return path;
     }
