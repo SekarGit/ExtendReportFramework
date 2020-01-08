@@ -17,6 +17,7 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 
+
 public class ExtendReportTest {
     WebDriver driver;
 
@@ -49,7 +50,7 @@ public class ExtendReportTest {
         extentTest = extentReports.createTest("openAmazonHomePage");
         driver.get("https://www.amazon.com");
         String titleName = driver.getTitle();
-        Assert.assertEquals(titleName,"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more1");
+        Assert.assertEquals(titleName,"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
     }
 
     @Test
@@ -90,9 +91,12 @@ public class ExtendReportTest {
     private String takeScreenShot(String methodName) throws IOException {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File screenShotSource = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String path = "C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\testEvidance\\FailedScreenshot"+System.currentTimeMillis()+".jpg";
+        String path = System.getProperty("user.dir") + "\\src\\test\\java\\testEvidance\\FailedScreenshot" + System.currentTimeMillis() + ".jpg";
         FileUtil.copyFile(screenShotSource,new File(path));
         return path;
     }
+
+
+
 
 }
