@@ -34,7 +34,7 @@ public class ExtendReportTest {
 
     @BeforeTest
     public void setupExtendReprot(){
-        extentHtmlReporter = new ExtentHtmlReporter("C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\testReports\\extendReport"+System.currentTimeMillis()+".html");
+        extentHtmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\src\\test\\java\\testReports\\extendReport"+System.currentTimeMillis()+".html");
         extentHtmlReporter.config().setDocumentTitle("Selenium UI Automation Reports");
         extentHtmlReporter.config().setReportName("Home Page Title Validations");
         extentHtmlReporter.config().setTheme(Theme.DARK);
