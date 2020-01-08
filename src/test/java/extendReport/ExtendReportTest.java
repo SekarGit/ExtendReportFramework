@@ -26,7 +26,7 @@ public class ExtendReportTest {
 
     @BeforeMethod
     public void setup(){
-       System.setProperty("webdriver.chrome.driver","C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\chromeDriver\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver","C:\\Users\\sekar_p\\Framework\\ExtenReportFramework\\src\\test\\java\\chromeDriver\\chromedriverNew.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
